@@ -28,6 +28,7 @@ class ClusterDetails extends StatelessWidget {
                         color: Color(0xff303437),
                         size: 13,
                       ),
+                      YMargin(6),
                       ColoredText(
                         title: 'Monthly upfront',
                       ),
@@ -52,6 +53,75 @@ class ClusterDetails extends StatelessWidget {
                   title: "Your contribution is 8% of your eligible amount ")
             ],
           ),
+          const CustomDivider(),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const ClusterHeader(
+                  title: "Group invite Link/Code", image: 'assets/link 2.png'),
+              const ColoredText(
+                title: 'Use the link or code below to invite new member',
+                color: Color(0xff303437),
+                size: 13,
+              ),
+              const YMargin(10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      ColoredText(
+                        title: 'Member invite code',
+                        color: Color(0xff303437),
+                        size: 13,
+                      ),
+                      YMargin(4),
+                      ColoredText(
+                        title: '30DF38TG000',
+                        size: 16,
+                      ),
+                    ],
+                  ),
+                  const ColoredText(
+                    size: 13,
+                    title: "Get new code",
+                    color: kPrimaryRed,
+                  )
+                ],
+              ),
+            ],
+          ),
+          const CustomDivider(),
+          Column(
+            children: [
+              const ClusterHeader(
+                  title: 'Loan setting', image: "assets/Group.png"),
+              ColoredText(
+                title: 'Member invite code',
+                size: 13,
+              ),
+              YMargin(4),
+              ColoredText(
+                fontWeight: FontWeight.w500,
+                title: '₦550,000,000',
+                size: 16,
+              ),
+              Row(
+                children: const [
+                  ColoredText(
+                    title: 'Member invite code',
+                    size: 13,
+                  ),
+                  YMargin(4),
+                  ColoredText(
+                    fontWeight: FontWeight.w500,
+                    title: '₦550,000,000',
+                  ),
+                ],
+              )
+            ],
+          )
         ],
       ),
     );
@@ -78,6 +148,24 @@ class ClusterHeader extends StatelessWidget {
           )
         ],
       ),
+    );
+  }
+}
+
+class CustomDivider extends StatelessWidget {
+  const CustomDivider({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: const [
+        YMargin(10),
+        Divider(
+          color: kGreyLight,
+        ),
+        YMargin(10),
+      ],
     );
   }
 }
